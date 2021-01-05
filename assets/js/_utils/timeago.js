@@ -38,12 +38,12 @@ $(function() {
     let day = Math.floor(seconds / 86400);
     if (day >= 1) {
       toRefresh -= 1;
-      return day + " 天" + (day > 1 ? "s" : "") + " 之前";
+      return day + " 天" + (day > 1 ? "" : "") + " 之前";
     }
 
     let hour = Math.floor(seconds / 3600);
     if (hour >= 1) {
-      return hour + " 小时" + (hour > 1 ? "s" : "") + " 之前";
+      return hour + " 小时" + (hour > 1 ? "" : "") + " 之前";
     }
 
     let minute = Math.floor(seconds / 60);
