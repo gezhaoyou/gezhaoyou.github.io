@@ -2,4 +2,4 @@ User-agent: *
 
 Disallow: /norobots/
 
-Sitemap: https://blog.fifo.site/gezhaoyou.github.io/sitemap.xml
+Sitemap: https://blog.fifo.site/sitemap.xml

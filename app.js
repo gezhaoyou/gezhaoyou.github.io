@@ -1,1 +1,4 @@
-/* Registering Service Worker */ if('serviceWorker' in navigator) { navigator.serviceWorker.register('/gezhaoyou.github.io/sw.js'); };
+/* Registering Service Worker */
+if('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/sw.js');
+};
