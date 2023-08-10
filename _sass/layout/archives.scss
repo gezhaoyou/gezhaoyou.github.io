@@ -1,0 +1,145 @@
+/*
+  Style for Archives
+*/
+
+#archives {
+  letter-spacing: 0.03rem;
+
+  $timeline-width: 1px;
+
+  %timeline {
+    content: '';
+    width: $timeline-width;
+    position: relative;
+    float: left;
+    background-color: var(--timeline-color);
+  }
+
+  .year {
+    height: 3.5rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    position: relative;
+    left: -15px;
+    margin-left: -$timeline-width;
+
+    &::before {
+      @extend %timeline;
+
+      height: 75px;
+      left: 22px;
+      bottom: 16px;
+    }
+
+    &:first-child::before {
+      @extend %timeline;
+
+      height: 24px;
+      top: 34px;
+    }
+  }
+
+
+  .title-month {
+    white-space: nowrap;
+    display: inline-block;
+    position: relative;
+    right: 0.5rem;
+    left: -16px;
+    
+    font-size: 80%;
+    font-weight: 600;
+    width: 2.5rem;
+    text-align: center;
+    border-radius: 2px;
+    background-color: var(--timeline-color);
+  }
+
+  ul {
+    li {
+      font-size: 1.1rem;
+      line-height: 3rem;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+
+      &:nth-child(odd) {
+        background-color: var(--main-bg, #ffffff);
+        background-image: linear-gradient(
+          to left,
+          #ffffff,
+          #fbfbfb,
+          #fbfbfb,
+          #fbfbfb,
+          #ffffff
+        );
+      }
+
+      &::before {
+        @extend %timeline;
+
+        top: 0;
+        left: 6px;
+        height: 3.1rem;
+      }
+    }
+
+    &:last-child li:last-child::before {
+      height: 1.5rem;
+    }
+  } /* #archives ul */
+
+  .date {
+    white-space: nowrap;
+    display: inline-block;
+    position: relative;
+    right: 0.5rem;
+    left: 50px; // 日期位置
+    font-weight: 600;
+    &.month {
+      width: 1.35rem;
+      text-align: center;
+    }
+
+    &.day {
+      font-size: 85%;
+      font-family: Lato, sans-serif;
+    }
+  }
+
+  a {
+    /* post title in Archvies */
+    margin-left: 2.5rem;
+    position: relative;
+    top: 0.1rem;
+    left: 30px; // 文章位置
+    &:hover {
+      border-bottom: none;
+    }
+
+    &::before {
+      /* the dot before post title */
+      content: '';
+      display: inline-block;
+      position: relative;
+      width: 5px;
+      height: 1px;
+      float: left;
+      top: 1.35rem;
+      left: 12px; // 文章标题短横线
+      background-color: var(--timeline-node-bg);
+      box-shadow: 0 0 3px 0 #c2c6cc;
+      z-index: 1;
+    }
+  }
+} /* #archives */
+
+@media all and (max-width: 576px) {
+  #archives {
+    margin-top: -1rem;
+
+    ul {
+      letter-spacing: 0;
+    }
+  }
+}

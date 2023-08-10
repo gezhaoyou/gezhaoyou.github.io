@@ -1,0 +1,97 @@
+---
+layout: post
+title:  "入坑键圈，造了一把机械键盘"
+description: ""
+author: zhaoyou
+date:   2023-05-05 09:39:26 +0800
+permalink: 2fbbfc28.html
+views:
+    - '50'
+categories:
+    - 巧记
+tags:
+    - 键盘
+image:
+  path: http://io.fifo.site/cherish-75.jpg
+  alt: Cherish-75
+  thumb:  
+    enable: true
+    size: 'small' #small, medium, large
+---
+
+挺喜欢机械键盘，市面上的机械键盘手感达不到自己的要求，要么比较硬，要么声音大，要么布局不喜欢，所以就自己做了一把。75%的布局，基于QMK，支持Via，外壳使用Sharp3D画的，并3D打印的，PCB就是嘉立创的一套。Gasket结构，PCB有开槽，非常软弹，打字音清爽无杂音，满足自己需求。键盘也开源出来，分享给有需要的朋友。
+
+### Cherish-75
+
+
+Cherish-75，客制化机械键盘，PCB已打样验证，旨在客制化交流分享，禁止商用！
+
+**主控**: STM32F072CBT6, Type-C分离小板
+
+**硬件PCB**：Flex Cut PCB，阻焊开窗(沉金),  立创工程链接:  [https://oshwhub.com/caiyahoho/Cherish-75](https://oshwhub.com/caiyahoho/Cherish-75)
+
+**配列**：75%，小门牙配列
+
+**轴座**: 焊接&热插拔
+
+**RGB:** 大写键 RGB
+
+**软件**：QMK & VIA，查看 `fireware` 目录
+
+**许可**：GPL3.0, 禁止商用
+
+**外壳**: 3D打印，**磁吸上下盖设计，确保是否满足个人需要，切勿直接打印使用**，查看 `3d-model`目录
+
+**感谢**：客制化入坑半年，工作加班也比较多，感谢老婆大人的宽容让我有时间折腾
+
+### 成品照
+
+
+![pic](http://io.fifo.site/cherish-75.jpg)
+
+### 黑色PCB布线效果: 
+
+![top](http://io.fifo.site/top.png)
+
+![bottom](http://io.fifo.site/bottom.png)
+
+### 白色PCB布线效果: 
+
+![top](http://io.fifo.site/white-top.png)
+
+![bottom](http://io.fifo.site/white-bottom.png)
+
+### USB接口子板:
+
+![daughterboard](http://io.fifo.site/daughterboard-1.png)
+
+![daughterboard](http://io.fifo.site/daughterboard-2.png)
+
+
+### 键盘布局：
+
+![layout](http://io.fifo.site/layout.png)
+
+### 支持Via
+![layout](http://io.fifo.site/cherish-75-via.png)
+
+### 3D打印外壳
+
+![top-case](http://io.fifo.site/3d-1.png)
+
+![top-case](http://io.fifo.site/3d-2.png)
+
+![top-case](http://io.fifo.site/3d-3.png)
+
+![top-case](http://io.fifo.site/top-case.png)
+
+![bottom-case](http://io.fifo.site/bottom-case.png)
+
+### PCB打样
+
+![pic-3](http://io.fifo.site/pcb-3.jpg)
+
+![pic-4](http://io.fifo.site/pcb-4.jpg)
+
+**焊接：**
+![pic](http://io.fifo.site/pcb-1.jpg)
