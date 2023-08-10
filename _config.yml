@@ -18,15 +18,15 @@ timezone: Asia/Shanghai
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-title: 帆部落             # the main title
+title: devzhaoyou             # the main title
 
 tagline: zhaoyou's blog   # it will display as the sub-title
 
 description: >- # used by seo meta and the atom feed
-  帆部落是一个关注音视频开发的技术博客, 专注于音视频, 图形图像开发知识分享和经验交流, 涉及WebRTC, 直播, 编解码, OpenGL, Android, iOS等领域
+   devzhaoyou, zhaoyou's development blog.
 
 # fill in the protocol & hostname for your site, e.g., 'https://username.github.io'
-url: 'https://fifo.site'
+url: 'https://devzhaoyou.com'
  
 github:
   username: gezhaoyou             # change to your github username
