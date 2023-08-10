@@ -1,0 +1,41 @@
+name: Deploy Jekyll
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+  workflow_dispatch:
+
+jobs:
+  jekyll:
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: checkout master
+        uses: actions/checkout@v2
+
+      - name: checkout gh-pages
+        uses: actions/checkout@v2
+        with:
+          ref: 'gh-pages'
+          path: 'gh-pages'
+
+      - name: setup ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 2.7
+          bundler-cache: true
+
+      - name: jekyll build
+        run: JEKYLL_ENV=production bundle exec jekyll build --destination gh-pages
+
+      - name: push gh-pages
+        run: |
+          cd gh-pages && \
+          git config user.name "${GITHUB_ACTOR}" && \
+          git config user.email "${GITHUB_ACTOR}@users.noreply.github.com" && \
+          git add . && \
+          git commit -m "jekyll build from Action ${GITHUB_SHA}" && \
+          git push
