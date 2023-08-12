@@ -22,6 +22,36 @@
   padding-right: $pr;
 }
 
+.post-author-info {
+  display: flex;
+  align-items: center;
+
+  .text-post-author-text {
+    margin-left: 10px;  /* 调整文字与图片之间的间距 */
+  }
+
+  .post-author-name, .post-meta-info {
+    white-space: nowrap;  /* 防止文字换行 */
+  }
+
+  /* 可根据需要设置图片和文字的样式 */
+  img {
+    width: 40px;  /* 设置图片的宽度 */
+    border-radius: 50%;
+    margin-right: 10px;
+    object-fit: cover;
+  }
+
+  .post-author-name {
+    font-weight: bold;
+  }
+
+  .post-meta-info {
+    color: gray;
+  }
+
+}
+
 %text-color {
   color: var(--text-color);
 }
