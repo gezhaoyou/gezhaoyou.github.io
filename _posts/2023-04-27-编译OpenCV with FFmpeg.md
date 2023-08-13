@@ -19,14 +19,12 @@ image:
     size: 'small' #small, medium, large
 ---
 
- 
 
 ## 编译环境
 
 - opencv : 4.6.0
 - ndk: r21e
 - os: mac m1 & 13.3.1
-
 
 
 ## 编译脚本
@@ -188,6 +186,5 @@ TBB: Downloading v2020.2.tar.gz from https://github.com/01org/tbb/archive/v2020.
 
 
 ## 参考：
-
-[https://zhuanlan.zhihu.com/p/472115312?utm_id=0](https://zhuanlan.zhihu.com/p/472115312?utm_id=0) 非常详细
-
+知乎：
+[https://zhuanlan.zhihu.com/p/472115312?utm_id=0](https://zhuanlan.zhihu.com/p/472115312?utm_id=0) , 非常详细
