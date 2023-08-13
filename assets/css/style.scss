@@ -114,3 +114,11 @@ h1.dynamic-title {
   }
   border-radius: 8px;
 }
+
+.site-logo {
+  img {
+    width: 180px;  /* 设置图片的宽度 */
+    height: 32px;
+    object-fit: fill;
+  }
+}

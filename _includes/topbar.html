@@ -3,61 +3,23 @@
 -->
 
 <div id="topbar-wrapper">
-  <div id="topbar" class="container d-flex align-items-center justify-content-between h-100 pl-3 pr-3 pl-md-4 pr-md-4">
-    <span id="breadcrumb">
-
-    {% assign paths = page.url | split: '/' %}
-
-    {% if paths.size == 0 or page.layout == 'home' %}
-      <!-- index page -->
-      <span>{{ site.data.locales[site.lang].tabs.home | capitalize }}</span>
-
-    {% else %}
-
-      {% for item in paths %}
-
-        {% if forloop.first %}
-          <span>
-            <a href="{{ '/' | relative_url }}">
-              {{ site.data.locales[site.lang].tabs.home | capitalize }}
-            </a>
-          </span>
-
-        {% elsif forloop.last %}
-
-          {% if page.collection == 'tabs' %}
-            <span>{{ site.data.locales[site.lang].tabs[item] | default: page.title }}</span>
-          {% else %}
-            <span>{{ page.title }}</span>
-          {% endif %}
-
-        {% elsif page.layout == 'category' or page.layout == 'tag' %}
-          <span>
-            <a href="{{ item | relative_url }}">
-              {{ site.data.locales[site.lang].tabs[item] | default: page.title }}
-            </a>
-          </span>
-        {% endif %}
-
-      {% endfor %}
-
-    {% endif %}
-
-    </span><!-- endof #breadcrumb -->
-
+  <div id="topbar" class="d-flex align-items-center justify-content-between h-100 pl-3 pr-3 pl-md-4 pr-md-4">
     <i id="sidebar-trigger" class="fas fa-bars fa-fw"></i>
-
-    <div id="topbar-title">
-      {% if page.layout == 'home' %}
-        {{- site.data.locales[site.lang].title | default: site.title -}}
-      {% elsif page.collection == 'tabs' or page.layout == 'page' %}
-        {%- capture tab_key -%}{{ page.url | split: '/' }}{%- endcapture -%}
-        {{- site.data.locales[site.lang].tabs[tab_key] | default: page.title -}}
-      {% else %}
-        {{- site.data.locales[site.lang].layout[page.layout] | default: page.layout | capitalize -}}
-      {% endif %}
-    </div>
-
+    <a href="/" class="site-logo">
+      {% if site.logo != empty and site.logo %}
+          {% capture logo_url %}
+            {% if site.logo contains '://' %}
+              {{ site.logo }}
+            {% elsif site.img_cdn != empty and site.img_cdn %}
+              {{ site.logo | prepend: site.img_cdn }}
+            {% else %}
+              {{ site.logo | relative_url }}
+            {% endif %}
+          {% endcapture %}
+          <img src="{{ logo_url | strip }}" alt="logo" onerror="this.style.display='none'">
+        {% endif %}
+    </a>
+ 
     <i id="search-trigger" class="fas fa-search fa-fw"></i>
     <span id="search-wrapper" class="align-items-center">
       <i class="fas fa-search fa-fw"></i>

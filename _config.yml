@@ -78,6 +78,9 @@ theme_mode: # [light|dark]
 # e.g. 'https://cdn.com'
 img_cdn: ""
 
+# the site logo, support local or CORS resources
+logo: "/commons/logo.png"
+
 # the avatar on sidebar, support local or CORS resources
 avatar: "/commons/avatar.jpg"
 
