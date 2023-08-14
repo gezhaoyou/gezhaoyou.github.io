@@ -116,30 +116,30 @@ h1.dynamic-title {
 }
 
 /* site logo */ 
-.logo-blog {
-  background-color: #6FE8BD;
-  border-radius: 5px;
-  text-align: center;
-  width: 50px;
-  height: 20px;
-  font-size: 12px;
-  font-weight: 600;
-  color: #0E1C23;
-
-  position: absolute;
-  top: 16px;
-  left: 135px;
-}
-
 .logo-title {
   text-align: center;
   width: 135px;
   height: 35px;
   font-size: 32px;
-  font-weight: 400;
+  font-weight: 500;
   color: var(--topbar-title-text-color);
   margin-bottom: 25px;
   font-family: "Arvo", sans-serif;
+}
+
+.logo-blog {
+  background-color: #6FE8BD;
+  border-radius: 5px;
+  text-align: center;
+  width: 45px;
+  height: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #141A23;
+
+  position: absolute;
+  top: 16px;
+  left: 138px;
 }
 
 .site-title-container {
@@ -155,4 +155,8 @@ h1.dynamic-title {
   background: linear-gradient(to right, #EFA03B, #00ff00); /* 渐变颜色 */
   -webkit-background-clip: text; 
   -webkit-text-fill-color: transparent;
+}
+
+a.site-title-link:hover {
+  text-decoration: none;
 }

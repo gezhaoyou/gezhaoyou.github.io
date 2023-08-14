@@ -91,30 +91,3 @@ export function switchTopbar() {
     }
   }, 250);
 }
-
-
-// 监听颜色模式变化
-const colorSchemeQuery = window.matchMedia('(prefers-color-scheme: dark)');
-
-export function initLogoImgSwitcher() {
-
-function updateImageSource() {
-  const image = document.getElementById('site-logo-imge');
-  console.log('gezhaoyou kkkkkkkkkk');
-  if (colorSchemeQuery.matches) {
-    // 暗黑模式
-    console.log('gezhaoyou jjjjjjjj');
-    image.src = 'https://fifo.site/wp-content/themes/file/assets/img/avatar.jpg';
-  } else {
-    // 白色模式
-    console.log('gezhaoyou bbbbbbbbbb');
-    image.src = 'http://127.0.0.1:4000/commons/logo.png';
-  }
-}
-
-// 页面加载时初始化图片
-window.addEventListener('load', updateImageSource);
-
-// 监听颜色模式变化并更新图片
-colorSchemeQuery.addEventListener('change', updateImageSource);
-}
