@@ -58,15 +58,17 @@ tail_includes:
         </div>
         <div class="post-meta-info">
           <span>
+            <!-- post date -->
             {{ site.data.locales[site.lang].post.posted }}
             {% include datetime.html date=page.date tooltip=true %}
+            
+            <!-- modify date -->
             {% if page.last_modified_at %}
-            <span>
               ({{ site.data.locales[site.lang].post.updated }}
               {% include datetime.html date=page.last_modified_at tooltip=true %})
-            </span>
             {% endif %}
-             •  
+          </span>
+          <span>
             <!-- read time -->
             {% include read-time.html content=content prompt=true %}
           </span>
