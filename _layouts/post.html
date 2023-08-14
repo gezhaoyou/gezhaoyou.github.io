@@ -33,7 +33,19 @@ tail_includes:
 
   <div class="d-flex justify-content-between">
     <div class="post-author-info">
-      <img src="https://fifo.site/wp-content/themes/file/assets/img/avatar.jpg" alt="ff">
+      {% if site.avatar != empty and site.avatar %}
+        {% capture avatar_url %}
+          {% if site.avatar contains '://' %}
+            {{ site.avatar }}
+          {% elsif site.img_cdn != empty and site.img_cdn %}
+            {{ site.avatar | prepend: site.img_cdn }}
+          {% else %}
+            {{ site.avatar | relative_url }}
+          {% endif %}
+        {% endcapture %}
+        <img src="{{ avatar_url | strip }}" alt="avatar" onerror="this.style.display='none'">
+      {% endif %}
+
       <div class="post-author-text">
         <div class="post-author-name">{% if authors %}
           {% for author in authors %}
