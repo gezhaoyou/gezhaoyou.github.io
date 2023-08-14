@@ -115,10 +115,44 @@ h1.dynamic-title {
   border-radius: 8px;
 }
 
-.site-logo {
-  img {
-    width: 180px;  /* 设置图片的宽度 */
-    height: 32px;
-    object-fit: fill;
-  }
+/* site logo */ 
+.logo-blog {
+  background-color: #6FE8BD;
+  border-radius: 5px;
+  text-align: center;
+  width: 50px;
+  height: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #0E1C23;
+
+  position: absolute;
+  top: 16px;
+  left: 135px;
+}
+
+.logo-title {
+  text-align: center;
+  width: 135px;
+  height: 35px;
+  font-size: 32px;
+  font-weight: 400;
+  color: var(--topbar-title-text-color);
+  margin-bottom: 25px;
+  font-family: "Arvo", sans-serif;
+}
+
+.site-title-container {
+  position: relative;
+}
+
+.gradient-text {
+  position: absolute;
+  top: -4px;
+  left: -10px;
+  font-size: 35px;
+  font-weight: 600;
+  background: linear-gradient(to right, #EFA03B, #00ff00); /* 渐变颜色 */
+  -webkit-background-clip: text; 
+  -webkit-text-fill-color: transparent;
 }

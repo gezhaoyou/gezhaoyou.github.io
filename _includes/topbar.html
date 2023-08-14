@@ -5,20 +5,13 @@
 <div id="topbar-wrapper">
   <div id="topbar" class="d-flex align-items-center justify-content-between h-100 pl-3 pr-3 pl-md-4 pr-md-4">
     <i id="sidebar-trigger" class="fas fa-bars fa-fw"></i>
-    <a href="/" class="site-logo">
-      {% if site.logo != empty and site.logo %}
-          {% capture logo_url %}
-            {% if site.logo contains '://' %}
-              {{ site.logo }}
-            {% elsif site.img_cdn != empty and site.img_cdn %}
-              {{ site.logo | prepend: site.img_cdn }}
-            {% else %}
-              {{ site.logo | relative_url }}
-            {% endif %}
-          {% endcapture %}
-          <img src="{{ logo_url | strip }}" id="site-logo-imge" alt="logo" onerror="this.style.display='none'">
-        {% endif %}
-    </a>
+    <!-- <a href="/" class="site-logo"> -->
+      <div class="site-title-container">
+       <div class="gradient-text">/</div>
+       <div class="logo-title">zhaoyou </div>
+       <div class="logo-blog">BLOG</div>
+      </div>
+    <!-- </a> -->
  
     <i id="search-trigger" class="fas fa-search fa-fw"></i>
     <span id="search-wrapper" class="align-items-center">
