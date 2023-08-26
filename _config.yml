@@ -112,6 +112,7 @@ assets:
     enabled: true
     # specify the Jekyll environment, empty means both
     # only works if `assets.self_host.enabled` is 'true'
+    env: [production]
     # env: [development]
 
 pwa:
@@ -119,6 +120,10 @@ pwa:
 
 paginate: 10
 
+
+busuanzi:
+   enabled: true
+   
 # ------------ The following options are not recommended to be modified ------------------
 
 kramdown:

@@ -10,16 +10,6 @@
     name="viewport"
     content="width=device-width, user-scalable=no initial-scale=1, shrink-to-fit=no, viewport-fit=cover"
   >
-  <!-- Google tag (gtag.js) | Add by zhaoyou -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-TDXWE8K8LF"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-
-    gtag('config', 'G-TDXWE8K8LF');
-  </script>
-  
   {% if page.layout == 'home' or page.layout == 'post' %}
     {% if site.google_analytics.pv.proxy_endpoint %}
       <meta name="pv-proxy-endpoint" content="{{ site.google_analytics.pv.proxy_endpoint }}">
@@ -119,6 +109,11 @@
   <!-- JavaScript -->
 
   <script src="{{ site.data.assets[origin].jquery.js | relative_url }}"></script>
+  
+  <!-- busuanzi  -->
+  {% if site.busuanzi.enabled%}
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  {% endif %}
 
   {% unless site.theme_mode %}
     {% include mode-toggle.html %}

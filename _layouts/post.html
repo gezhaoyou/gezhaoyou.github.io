@@ -72,21 +72,19 @@ tail_includes:
             <!-- read time -->
             {% include read-time.html content=content prompt=true %}
           </span>
+        
+          <!-- page views -->
+          {% if site.busuanzi.enabled%}
+          <span id="busuanzi_container_page_pv">
+            <em id="pv" class="pageviews">
+              <span id="busuanzi_value_page_pv"></span>
+            </em>
+            {{ site.data.locales[site.lang].post.pageview_measure }}
+          </span>
+          {% endif %}
         </div>
       </div>
     </div>
-    <div>
-      <!-- page views -->
-      {% if site.google_analytics.pv.proxy_endpoint or site.google_analytics.pv.cache_path %}
-      <span>
-        <em id="pv" class="pageviews">
-          <i class="fas fa-spinner fa-spin fa-fw"></i>
-        </em>
-        {{ site.data.locales[site.lang].post.pageview_measure }}
-      </span>
-      {% endif %}
-    </div>
-
   </div> <!-- .d-flex -->
 
 </div> <!-- .post-meta -->
