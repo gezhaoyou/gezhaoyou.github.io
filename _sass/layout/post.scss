@@ -193,11 +193,12 @@ h1 + .post-meta {
     @include btn-post-nav;
 
     color: var(--link-color);
-
+    border-radius: 8px;
+    
     &:hover {
-      background: #2a408e;
+      background: #007bff;
       color: #ffffff;
-      border-color: #2a408e;
+      border-color: #007bff;
     }
 
     &.disabled {

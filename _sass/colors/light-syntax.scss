@@ -76,6 +76,11 @@
   --code-header-icon-color: #d1d1d1;
   --clipboard-checked-color: #43c743;
 
+  // 
+  --code-header-color-mac-red: #ED6C5F;
+  --code-header-color-mac-yellow: #F4BF4F;
+  --code-header-color-mac-green: #62C655;
+
   [class^='prompt-'] {
     --inline-code-bg: #fbfafa;
     --highlighter-rouge-color: rgb(82, 82, 82);

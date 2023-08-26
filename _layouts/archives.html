@@ -21,7 +21,7 @@ layout: page
   <!-- mouth -->
   {% capture cur_month %}{{ post.date | date: "%m" }}{% endcapture %}
   {% if cur_month != last_month %}
-    <span class="title-month small text-muted ml-1" > {{ cur_month }}</span>
+    <div class="title-month lead" > {{ cur_month }}</div>
     {% assign last_month = cur_month %}
   {% endif %}
 

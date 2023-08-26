@@ -20,7 +20,6 @@
     font-size: 1.5rem;
     font-weight: 600;
     position: relative;
-    left: -15px;
     margin-left: -$timeline-width;
 
     &::before {
@@ -40,21 +39,6 @@
   }
 
 
-  .title-month {
-    white-space: nowrap;
-    display: inline-block;
-    position: relative;
-    right: 0.5rem;
-    left: -16px;
-    
-    font-size: 80%;
-    font-weight: 600;
-    width: 2.5rem;
-    text-align: center;
-    border-radius: 2px;
-    background-color: var(--timeline-color);
-  }
-
   ul {
     li {
       font-size: 1.1rem;
@@ -62,7 +46,7 @@
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
-
+      left: 100px;
       &:nth-child(odd) {
         background-color: var(--main-bg, #ffffff);
         background-image: linear-gradient(
@@ -79,7 +63,7 @@
         @extend %timeline;
 
         top: 0;
-        left: 6px;
+        left: 22px;
         height: 3.1rem;
       }
     }
@@ -88,6 +72,19 @@
       height: 1.5rem;
     }
   } /* #archives ul */
+
+
+  .title-month {
+    position: relative;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.5rem;
+    width: 3rem;
+    height: 1.5rem;
+    text-align: center;
+    border-radius: 2px;
+    background-color: var(--timeline-color);
+  }
 
   .date {
     white-space: nowrap;

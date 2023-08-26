@@ -177,9 +177,9 @@ div {
     width: $dot-size;
     height: $dot-size;
     border-radius: 50%;
-    background-color: var(--code-header-muted-color);
-    box-shadow: ($dot-size + $dot-margin) 0 0 var(--code-header-muted-color),
-      ($dot-size + $dot-margin) * 2 0 0 var(--code-header-muted-color);
+    background-color: var(--code-header-color-mac-red);
+    box-shadow: ($dot-size + $dot-margin) 0 0 var(--code-header-color-mac-yellow),
+      ($dot-size + $dot-margin) * 2 0 0 var(--code-header-color-mac-green);
   }
 
   /* the label block */
