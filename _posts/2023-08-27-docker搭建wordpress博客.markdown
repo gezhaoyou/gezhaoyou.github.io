@@ -128,5 +128,13 @@ docker-compose up --build
 
 
 
+## 推荐
+
+最后推荐一下我移植的 WordPress 主题 Molly: [https://github.com/gezhaoyou/wordpress-theme-molly](https://github.com/gezhaoyou/wordpress-theme-molly)
+
+![screenshot](https://io.fifo.site/screenshot.png)
+
+
+
 
 

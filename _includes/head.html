@@ -49,9 +49,9 @@
 
   <title>
     {% if page.layout == 'home' %}
-      {{ site.title | append: ' | '}} {{ site.tagline }}
+      {{ site.title | append: ' - '}} {{ site.tagline }}
     {% else %}
-      {{ page.title | append: ' | ' }} {{ site.title }}
+      {{ page.title | append: ' - ' }} {{ site.title }}
     {% endif %}
   </title>
 
