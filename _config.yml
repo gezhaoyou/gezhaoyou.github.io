@@ -23,7 +23,7 @@ title: devzhaoyou             # the main title
 tagline: zhaoyou's blog   # it will display as the sub-title
 
 description: >- # used by seo meta and the atom feed
-   devzhaoyou, zhaoyou's development blog.
+   devzhaoyou是zhaoyou的个人开发博客, 关于编程, 算法, 音视频相关开发记录, 以及一些生活随笔, 工具装备折腾！
 
 # fill in the protocol & hostname for your site, e.g., 'https://username.github.io'
 url: 'https://devzhaoyou.com'
