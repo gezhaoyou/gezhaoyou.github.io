@@ -120,6 +120,12 @@ docker-compose up --build
 
 ![image-20230827175713106](https://io.fifo.site/image-20230827175713106.png)
 
+## 参考
+
+[https://digitalapps.com/developing-wordpress-with-docker-on-apple-silicon/](https://digitalapps.com/developing-wordpress-with-docker-on-apple-silicon/)
+
+[https://catalins.tech/how-to-run-wordpress-locally-on-macos-with-docker-compose/](https://catalins.tech/how-to-run-wordpress-locally-on-macos-with-docker-compose/)
+
 
 
 
