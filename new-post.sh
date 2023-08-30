@@ -2,21 +2,24 @@
 
 DIR="${0%/*}"
 
-title=`echo $@ | sed 's/[ ][ ]*/-/g'`
-post_date=`date  +"%Y-%m-%d %T"`
-post_name="`date "+%Y-%m-%d"`-${title}.markdown"
-random_addr=`openssl rand -hex 8 | md5 | cut -c1-8`
+TITLE=`echo $@ | sed 's/[ ][ ]*/-/g'`
+SLUG=`openssl rand -hex 8 | md5 | cut -c1-8`
 
-cat > ${DIR}/_posts/${post_name} << EOF
+# Get current date, year, and month
+TIME=$(date +"%Y-%m-%d %T")
+DATE=$(date +"%Y-%m-%d")
+YEAR=$(date +"%Y")
+MONTH=$(date +"%m")
+
+mkdir -p _posts/$YEAR/$MONTH
+
+cat > ${DIR}/_posts/$YEAR/$MONTH/$DATE-${TITLE}.md << EOF
 ---
 layout: post
-title:  "${title}"
-description: ""
+title:  "${TITLE}"
 author: zhaoyou
-date:   ${post_date} +0800
-permalink: ${random_addr}.html
-views:
-    - '50'
+date:   ${TIME} +0800
+permalink: ${SLUG}.html
 categories:
     - 代码
 tags:
@@ -24,12 +27,15 @@ tags:
 
 image:
   path: http://io.fifo.site/thumb-$[RANDOM%11+1].jpg
-  alt: title image
+  alt: ''
   thumb:  
     enable: true
     size: 'small' #small, medium, large
+
+# SEO INFO
+description: ""
 ---
 
 EOF
 
-open ${DIR}/_posts/${post_name}
+open ${DIR}/_posts/$YEAR/$MONTH/$DATE-${TITLE}.md

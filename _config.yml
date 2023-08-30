@@ -122,7 +122,7 @@ paginate: 10
 
 
 busuanzi:
-   enabled: true
+   enabled: false
    
 # ------------ The following options are not recommended to be modified ------------------
 
